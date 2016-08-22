@@ -1750,7 +1750,7 @@ function ($timeout, $parse, $http, $compile, $q, $templateCache, EventEmitter) {
 
                 this.templateUrl === 'clone' ? this.createElementByClone() : this.createElementByTemplate();
 
-                this.wrap().appendTo($(document.body));
+                this.wrap().appendTo($(this.mainElement));
 
                 if (!this.scope.$root || !this.scope.$root.$$phase) {
                     this.scope.$apply();
